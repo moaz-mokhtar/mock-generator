@@ -1,2 +1,2 @@
-pub mod models;
 pub mod generator;
+pub mod models;
