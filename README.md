@@ -6,6 +6,11 @@ This is to illustrate a functionality which I'm using in my Rust code to
 generating objects for `struct`s to be able to use them for testing or other
 reason. This is to minimize developer's efforts to create objects to test.
 
+## Plan
+
+- [x] Develep a basic illustration for the mock generator.
+- [ ] Develop test cases which illustrates the benefits of `mock_generator`.
+
 ## Design
 
 ```rust
