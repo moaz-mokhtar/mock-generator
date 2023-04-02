@@ -13,9 +13,9 @@ impl Object {
         let start = Instant::now();
         let mut rng = rand::thread_rng();
 
-        let id = rng.gen_range(0..1000_000_000);
+        let id = rng.gen_range(0..1_000_000_000);
         let name = words::word();
-        let index = rng.gen_range(0..1000_000);
+        let index = rng.gen_range(0..1_000_000);
         let code = (0..15).map(|_| rng.sample(Alphanumeric) as char).collect();
 
         (
@@ -34,12 +34,12 @@ impl Object {
         let start = Instant::now();
         let mut mocks: Vec<Object> = Vec::new();
 
-        for i in (0..count) {
+        for _i in 0..count {
             let mut rng = rand::thread_rng();
 
-            let id = rng.gen_range(0..1000_000_000);
+            let id = rng.gen_range(0..1_000_000_000);
             let name = words::word();
-            let index = rng.gen_range(0..1000_000);
+            let index = rng.gen_range(0..1_000_000);
             let code = (0..15).map(|_| rng.sample(Alphanumeric) as char).collect();
 
             mocks.push(Object {
@@ -52,16 +52,4 @@ impl Object {
 
         (mocks, start.elapsed())
     }
-}
-
-fn your_function() {
-    // Start timing
-    let start = Instant::now();
-
-    // Your function here
-    // ...
-
-    // End timing
-    let elapsed = start.elapsed();
-    println!("Time elapsed: {:?}", elapsed);
 }
